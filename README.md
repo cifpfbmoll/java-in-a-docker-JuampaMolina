@@ -1,14 +1,17 @@
-# Autograding Example: Java
-This example project is written in Java, and tested with Gradle/JUnit.
+# Fast Break Truck
 
-### The assignment
-The tests are currently failing because of an output mismatch. Fixing the `System.out.println` in the main method will make the tests green.
+En este kata pondremos en práctica los patrones de diseño y los principios SOLID.
 
-### Setup command
-N/A
+### Problema
+El problema de este Kata es la creación de distintos tipos de desayuno, queremos evitar la creación de los mismos mediante infinidad de subclases o el uso de construcotres telescópicos. 
 
-### Run command
-`gradle test`
+En lugar de crear todos los tipos de desayuno, haremos que el desayuno se conponga de distintos items, cada item puede representar un tipo de cereales, bebida o juguete.
 
-### Notes
-- The JDK is installed on GitHub Actions machines, so you're also able to directly invoke `javac`, `java`, or any other CLI command included in the JDK. 
+### Builder Pattern
+Este patrón se ajusta a nuestro problema a la perfección, ya que nos permite la creación de objetos complejos (desayuno) a partir de objetos más pequeños (items). 
+
+Esto nos permite crear todos los tipos de desayuno deseados sin necesidad de cambiar el código existente, únicamente extendiéndolo.
+
+**El enunciado del Kata:**
+
+[https://github.com/dfleta/fastbreaktruck](https://github.com/dfleta/fastbreaktruck)

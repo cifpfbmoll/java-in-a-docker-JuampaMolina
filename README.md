@@ -1,17 +1,30 @@
-# Fast Break Truck
+# Java Multi-Stage Docker Build
 
-En este kata pondremos en práctica los patrones de diseño y los principios SOLID.
+Puedes encontrar la imagen publicada en 
+[DockerHub](https://hub.docker.com/repository/docker/juampamolina/javadocker)
 
-### Problema
-El problema de este Kata es la creación de distintos tipos de desayuno, queremos evitar la creación de los mismos mediante infinidad de subclases o el uso de construcotres telescópicos. 
+## Ejecutar la aplicacion
+El contenedor es eliminado tan pronto la aplicación termina de ejecutarse.
 
-En lugar de crear todos los tipos de desayuno, haremos que el desayuno se conponga de distintos items, cada item puede representar un tipo de cereales, bebida o juguete.
+```
+docker run --rm juampamolina/javadocker
+```
 
-### Builder Pattern
-Este patrón se ajusta a nuestro problema a la perfección, ya que nos permite la creación de objetos complejos (desayuno) a partir de objetos más pequeños (items). 
+### Salida en pantalla
+```
+No abras la caja de Eyeholes!
+Item: Eyeholes, Empaquetado: Caja, Precio: 25.0
+Item: Turbulent Juice, Empaquetado: Tubo, Precio: 30.0
+Precio pedido: 55.0
 
-Esto nos permite crear todos los tipos de desayuno deseados sin necesidad de cambiar el código existente, únicamente extendiéndolo.
+Smiggles per als nins!
+Item: Smiggles, Empaquetado: Caja, Precio: 50.0
+Item: Fleeb Juice, Empaquetado: Tubo, Precio: 35.0
+Precio pedido: 85.0
 
-**El enunciado del Kata:**
-
-[https://github.com/dfleta/fastbreaktruck](https://github.com/dfleta/fastbreaktruck)
+Eyeholes con plumbus!
+Item: Eyeholes, Empaquetado: Caja, Precio: 25.0
+Item: Turbulent Juice, Empaquetado: Tubo, Precio: 30.0
+Item: Plumbus, Empaquetado: Caja, Precio: 100.0
+Precio pedido: 155.0
+```
